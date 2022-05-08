@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RecyclerViewListAdapter</string>
+    <string name="monster_stats">HP %1$s / MP %2$s / EXP %3$s</string>
 </resources>

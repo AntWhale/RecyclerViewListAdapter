@@ -7,11 +7,13 @@ import com.sample.recyclerviewlistadapter.databinding.LayoutViewholderBinding
 class MyViewHolder(private val binding: LayoutViewholderBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(data: Monster){
         with(binding){
-            tvName.text = "Name: ${data.name}"
+            /*tvName.text = "Name: ${data.name}"
             tvRace.text = "Race: ${data.race}"
             tvLevel.text = "Level: ${data.level}"
             tvStats.text = "HP: ${data.stats[0]} / MP: ${data.stats[1]} / EXP: ${data.stats[2]}"
-            tvEncount.text = "Encounted: ${data.encount}"
+            tvEncount.text = "Encounted: ${data.encount}"*/
+            monster = data
+            executePendingBindings()
 
             layoutViewholder.setOnClickListener {
                 Snackbar.make(it, "Item $layoutPosition touched", Snackbar.LENGTH_SHORT).show()
